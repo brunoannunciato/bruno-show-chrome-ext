@@ -1,0 +1,27 @@
+{
+	"name": "bruno.show",
+	"version": "1.0",
+	"description": "Está ferramenta não ira te ajudar em nada, não fará do seu dia mais produtivo, muito menos divertido. Ela apenas irá te atrapalhar.",
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"app.js"
+			],
+			"run_at": "document_idle",
+			"all_frames": false
+		}
+	]
+}
